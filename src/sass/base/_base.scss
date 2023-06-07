@@ -8,21 +8,21 @@
 	box-sizing: inherit;
 }
 
-// установка 1rem = 10px, но напрямую =10px - это перезаписать стандартный размер шрифта браузера, поэтому считаем, что (10px / 16px = 0.625 = 62.5%)
+// setting up 1rem = 10px
+//(10px / 16px = 0.625 = 62.5%) in case if default font size is more than 16px
 html {
 	font-size: 62.5%;
 }
 
 body {
 	box-sizing: border-box;
-	font-family: 'Roboto', sans-serif;
-	font-weight: 400;
-	line-height: auto;
-	color: #000;
-	background-color: #fff;
+
+	background-color: $color-secondary;
 	padding: 0;
 	min-height: 100vh;
 	position: relative;
+	overflow-y: auto;
+	scrollbar-gutter: stable;
 }
 
 a,
@@ -59,6 +59,14 @@ p {
 	font-size: inherit;
 }
 
+p {
+	text-align: left;
+}
+
+li {
+	list-style: none;
+}
+
 input::-webkit-outer-spin-button,
 input::-webkit-inner-spin-button {
 	-webkit-appearance: none;
@@ -69,20 +77,19 @@ input::-webkit-inner-spin-button {
 /* Firefox */
 * {
 	scrollbar-width: none;
-	scrollbar-color: #ffffff #33394d;
+	scrollbar-color: transparent #999;
 }
 
 /* Chrome, Edge, and Safari */
 *::-webkit-scrollbar {
-	width: 10px;
+	width: 5px;
 }
 
 *::-webkit-scrollbar-track {
-	background: #33394d;
+	background: transparent;
 }
 
 *::-webkit-scrollbar-thumb {
-	background-color: #ffffff;
-	border-radius: 10px;
-	border: 3px none #ffffff;
+	background-color: #999;
+	// border-radius: 10px;
 }

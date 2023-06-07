@@ -1,0 +1,38 @@
+.footer {
+	position: fixed;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	text-align: center;
+	color: $color-text;
+	background-color: $color-primary;
+	padding: 1rem 3rem 0.8rem;
+
+	// make a whitespace to make element
+	// before footer visible
+	&__space {
+		height: 6rem;
+	}
+
+	&__items {
+		display: flex;
+		justify-content: space-between;
+		padding: 0 1rem;
+	}
+
+	&__item {
+		padding: 0 0.2rem;
+
+		&.active {
+			color: $color-secondary;
+		}
+	}
+
+	&__icon {
+		font-size: 2rem;
+	}
+
+	&__desc {
+		font-size: 1.1rem;
+	}
+}
